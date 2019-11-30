@@ -1,4 +1,4 @@
-package FrameworkDemo.FrameworkDemo;
+package commonFunctions;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 

@@ -2,16 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62602" started-at="2019-11-03T07:33:43Z" finished-at="2019-11-03T07:34:46Z">
+  <suite name="Suite" duration-ms="33618" started-at="2019-11-30T10:03:54Z" finished-at="2019-11-30T10:04:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="62602" started-at="2019-11-03T07:33:43Z" finished-at="2019-11-03T07:34:46Z">
-      <class name="FrameworkDemo.FrameworkDemo.HomePage">
-        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:FrameworkDemo.FrameworkDemo.HomePage@7cd62f43]" name="basePageNavigation" duration-ms="61939" started-at="2019-11-03T07:33:44Z" finished-at="2019-11-03T07:34:46Z">
+    <test name="Test" duration-ms="33618" started-at="2019-11-30T10:03:54Z" finished-at="2019-11-30T10:04:28Z">
+      <class name="testCases.HomePage">
+        <test-method status="PASS" signature="Fn_openBrowser(java.lang.String)[pri:0, instance:testCases.HomePage@e25b2fe]" name="Fn_openBrowser" is-config="true" duration-ms="17036" started-at="2019-11-30T10:03:54Z" finished-at="2019-11-30T10:04:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-      </class> <!-- FrameworkDemo.FrameworkDemo.HomePage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- Fn_openBrowser -->
+        <test-method status="PASS" signature="TestCas()[pri:0, instance:testCases.HomePage@e25b2fe]" name="TestCas" duration-ms="15737" started-at="2019-11-30T10:04:11Z" finished-at="2019-11-30T10:04:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCas -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.HomePage@e25b2fe]" name="tearDown" is-config="true" duration-ms="793" started-at="2019-11-30T10:04:27Z" finished-at="2019-11-30T10:04:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.HomePage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -2,3 +2,10 @@
 2019-11-03 13:04:12,115 [main] INFO HomePage - WebSite is Opened
 2019-11-03 13:04:12,180 [main] INFO HomePage - working fineeeee
 2019-11-03 13:08:21,662 [main] ERROR HomePage - WebSite is Opened
+2019-11-30 12:03:48,628 [main] INFO HomePage - URL Successfully Launched
+2019-11-30 15:26:46,084 [main] INFO Base - Chrome Browser Opened 
+2019-11-30 15:27:10,520 [main] INFO Base - URL is opened
+2019-11-30 15:27:12,830 [main] INFO Base - Browser closed successfully
+2019-11-30 15:34:11,698 [main] INFO Base - Chrome Browser Opened 
+2019-11-30 15:34:27,475 [main] INFO Base - URL is opened
+2019-11-30 15:34:28,278 [main] INFO Base - Browser closed successfully

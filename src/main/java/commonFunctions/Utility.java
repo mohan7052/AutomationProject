@@ -1,4 +1,4 @@
-package FrameworkDemo.FrameworkDemo;
+package commonFunctions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
