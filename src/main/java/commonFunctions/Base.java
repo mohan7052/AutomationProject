@@ -39,20 +39,20 @@ public static Logger logger;
 	chromePath = Utility.ReadConfig("chromePath"); 
 	if (browserType == null) {
 		//System.out.println("BroserType is null..." + "Please go to testng.xml and give browsertype");
-		logger.info("BroserType is null...\" + \"Please go to testng.xml file and give browsertype");
+		logger.error("BroserType is null...\" + \"Please go to testng.xml file and give browsertype");
 	}
 	else if(browserType.toLowerCase().equals("chrome"))
 	{
 		System.setProperty("webdriver.chrome.driver", chromePath);
 		driver = new ChromeDriver();
-				driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		CommonFunctions.Fn_PageSync(driver);
 		logger.info("Chrome Browser Opened ");
 	}
 	else
 	{
 		//System.out.println("Please configure framework with other browser type");
-		logger.info("Please configure framework with other browser type");
+		logger.error("Please configure framework with other browser type");
 	}
  }
  

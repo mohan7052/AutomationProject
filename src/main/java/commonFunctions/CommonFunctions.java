@@ -1,7 +1,11 @@
 package commonFunctions;
+import java.io.File;
+import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -12,51 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CommonFunctions {
-	@SuppressWarnings("unused")
-	// public static void main(String[] args) {
-
-	/************************************************************************************************************
-	 * Function Name : Fn_ClickOnObject Description : This Function is useful to
-	 * click on object by taking different locator objects as input Author : Mohana
-	 * Rao Gedela Date of Creation: 26-06-2019
-	 * 
-	 *************************************************************************************************************/
-	public void Fn_ClickOnObject(WebDriver driver, String loc, String exp) {
-		/*
-		 * String av= loc.toUpperCase(); switch (loc.toUpperCase()) {
-		 * 
-		 * case "XPATH": driver.findElement(By.xpath(exp)).click(); break; case "ID":
-		 * driver.findElement(By.id(exp)).click(); break;
-		 * 
-		 * }
-		 */
-		try {
-
-			if (loc.equalsIgnoreCase("xpath")) {
-				driver.findElement(By.xpath(exp)).click();
-			} else if (loc.equalsIgnoreCase("id")) {
-				driver.findElement(By.id(exp)).click();
-			} else if (loc.equalsIgnoreCase("cssSelector")) {
-				driver.findElement(By.cssSelector(exp)).click();
-			} else if (loc.equalsIgnoreCase("name")) {
-				driver.findElement(By.name(exp)).click();
-			} else if (loc.equalsIgnoreCase("className")) {
-				driver.findElement(By.className(exp)).click();
-			} else if (loc.equalsIgnoreCase("linkText")) {
-				driver.findElement(By.linkText(exp)).click();
-			} else if (loc.equalsIgnoreCase("partialLinkText")) {
-				driver.findElement(By.partialLinkText(exp)).click();
-			} else if (loc.equalsIgnoreCase("tagName")) {
-				driver.findElement(By.tagName(exp)).click();
-			} else {
-				System.out.println("User didn't provide any locator");
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-
-		}
-	}
+public class CommonFunctions{
 
 	/************************************************************************************************************
 	 * Function Name : Fn_enterTextUsingObject Description : This Function is useful
@@ -64,6 +24,7 @@ public class CommonFunctions {
 	 * Mohana Rao Gedela Date of Creation: 26-06-2019
 	 * 
 	 *************************************************************************************************************/
+	
 	public void Fn_enterTextUsingObject(WebDriver driver, String loc, String exp, String text) {
 		try {
 			if (loc.equalsIgnoreCase("xpath")) {
@@ -353,6 +314,27 @@ public class CommonFunctions {
 		}
 	}
 	
+	/****************************************************************************************************
+	 * FunctionName :Fn_FolderCreation
+	 * Date of Creation : 01/12/2019
+	 * @throws IOException 
+	 * 
+	 * 
+	 ****************************************************************************************************/
+	public static void Fn_FolderCreation(String path) throws IOException
+	{
+		File file = new File(path);
+		if(!file.exists())
+		{
+			if(file.mkdir())
+			{
+				System.out.println("Folder CReation is completed");
+			}
+		}else {
+			System.out.println("Folder already present in the mentioned path");
+		}
+		
+	}
 /************************************************************************************************************
 	 * Function Name : Fn_JqueyCalenderSelection Description : Author : Mohana Rao Gedela
 	 * Date of Creation: 25-07-2019
